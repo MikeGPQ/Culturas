@@ -20,14 +20,12 @@ export function Loading() {
         }
     };
 
-    // Links to show when logged in
     const authLinks = [
         { name: 'Aztecs', path: '/aztecs' },
         { name: 'Mayas', path: '/mayas' },
         { name: 'Logout', action: handleLogout }
     ];
 
-    // Links to show when logged out
     const guestLinks = [
         { name: 'Login', path: '/login' },
         { name: 'Register', path: '/register' }
@@ -37,7 +35,6 @@ export function Loading() {
 
     return (
         <div style={{ display: 'flex', minHeight: '100vh' }}>
-            {/* Fixed Navbar */}
             <nav style={{ position: 'fixed', left: 0, top: 0, bottom: 0, width: '8rem', backgroundColor: '#4CAF50' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.125rem', padding: '1rem 0' }}>
                     {navLinks.map((link) => (
