@@ -1,15 +1,18 @@
 import './App.css'
+import { Loading } from './NavBar';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AuthProvider } from './AuthContext';
 
 function App() {
-  return (
-      <div style={{
-          fontSize: '2.25rem',   
-          fontWeight: 'bold',     
-          color: '#3b82f6'       
-      }}>
-          Hello World
-      </div> 
-  )
+    return (
+        <AuthProvider>
+            <Router>
+                <Routes>
+                    <Route path="/*" element={<Loading />} />
+                </Routes>
+            </Router>
+        </AuthProvider>
+    )
 }
 
 export default App
